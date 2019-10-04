@@ -15,6 +15,12 @@
 */
 
 //Code here
+let me = {
+  name: "Roundy",
+  age: 30
+}
+
+alert(me.name)
 
 ////////// PROBLEM 2 //////////
 
@@ -24,6 +30,14 @@
 */
 
 //Code here
+let favoriteThings = {
+  band: "Mandolin Orange",
+  food: "Smooked Meats",
+  person: "My wife, Erin",
+  book: "Red Rising",
+  movie: "Free Solo",
+  holiday: "Where ever my family is"
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
@@ -31,6 +45,8 @@
 */
 
 //Code here
+favoriteThings.car = "Tesla"
+favoriteThings["brand"] = "mountian hardwear"
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -39,23 +55,37 @@
 
 //Code here
 
+
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings['book'] = 'Harry Potter'
+
+
 ////////// PROBLEM 3 //////////
 
 /*
   Create an empty Object called backPack.
-  Now, create a variable called item and set it equal to the string 'firstPocket'.
-  Using bracket notation and the item variable, add a 'firstPocket' key (or property) to backPack.
+  Now, create a variable called 'item' and set it equal to the string 'firstPocket'.
+  Using bracket notation, add a 'firstPocket' key (or property) to backPack, using 'item'.
   Set the value of that key to 'chapstick'.
   Using dot notation, add another key (or property) to your backPack object that is named color, with the value being the color of your backpack.
 */
 
 //Code here
+let backPack = {
+
+}
+
+let item = 'firstPocket';
+backPack[item] = "chapstick";
+backPack.color = "Neon Pink"
+
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
+alert(backPack)
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -64,6 +94,8 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
+console.log(backPack)
+
 
 ////////// PROBLEM 4 //////////
 
@@ -86,6 +118,9 @@ var user2 = {
 
 //Code Here
 
+user2.name = 'Bryan G. Smith';
+user2.email = 'bryan.smith@devmounta.in';
+
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
@@ -96,19 +131,30 @@ var user2 = {
 */
 
 //Code Here
+let methodCollection = {
+  alertHello: function() {
+    alert('hello');
+  },
+  logHello: function () {
+    console.log("hello");
+  }
+}
 
-/*
+/* DONE
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
 //Code Here
 
+
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
+
+
 
 ////////// PROBLEM 6 //////////
 
@@ -118,6 +164,16 @@ var user2 = {
 */
 
 //Code Here
+function makePerson (name, birthday, ssn) {
+  let obj = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  }
+  return obj;
+}
+
+makePerson(Roundy, Birthday, 123456789)
 
 ////////// PROBLEM 7 //////////
 
@@ -127,3 +183,14 @@ var user2 = {
 */
 
 //Code Here
+
+function makeCard (cardNumber, expirationDate, securityCode) {
+  let obj = {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+  return obj;
+}
+
+makeCard (123456,10/23,000);
